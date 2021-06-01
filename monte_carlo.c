@@ -38,6 +38,20 @@ int main(void) {
     }
   }
 }
-
+float mc_pi(int darts)
+{
+int count=0;
+float x,y;
+float r;
+for(int i=0;i<darts;++i)
+{
+x=frandom();
+y=frandom();
+r=sqrt(x*x+y*y);
+if(r<=1)
+count++;
+}
+return 4.0*(count/(float)darts);
+}
 
 
